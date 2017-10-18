@@ -3,6 +3,7 @@ import Header from './header';
 import AddOption from './add-options';
 import Options from './options';
 import Action from './action'
+import OptionModal from './option-modal';
 
 Header.defaultProps = {
     title: '~ Indecision ~ App'
@@ -10,11 +11,12 @@ Header.defaultProps = {
 
 export default class IndecisionApp extends React.Component {
     static defaultProps = {
-        options: []
+        options: [],
     }
     
     state = { 
-        options: this.props.options
+        options: this.props.options,
+        selectedOption: undefined
     }
     
     // React equivalent of onInit(); React Component LifeCycle
@@ -50,7 +52,11 @@ export default class IndecisionApp extends React.Component {
         const randomNumber = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNumber];
 
-        console.log('Option:', option);
+        this.setState(() => ({ selectedOption: option }));
+    }
+
+    handleEmptySelectedState = () => {
+        this.setState(() => ({ selectedOption: undefined }));
     }
 
     handleDeleteOptions = () => {
@@ -89,6 +95,9 @@ export default class IndecisionApp extends React.Component {
                     onDeleteOption={this.handleDeleteOption}/>
                 <AddOption 
                     onAddOption={this.handleAddOption}/>
+                <OptionModal 
+                    selectedOption={this.state.selectedOption}
+                    onClose={this.handleEmptySelectedState} />
             </div>
         )
     }

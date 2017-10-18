@@ -24,6 +24,7 @@
   "dependencies": {
     "react": "16.0.0",
     "react-dom": "16.0.0",
+    "react-modal": "^3.0.3",
     "validator": "^9.0.0"
   }
 }
