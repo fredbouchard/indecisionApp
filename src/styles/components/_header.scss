@@ -1,0 +1,23 @@
+$header-background-color: $off-black !default;
+$header-subtitle-color: $off-gray !default;
+$header-color: $white !default;
+
+.header {
+    width: 100%;
+    flex: 1 1 auto;
+    background-color: $header-background-color;
+    color: $header-color;
+    margin-bottom: $xl-size;
+    padding: $m-size 0;
+
+    &-title {
+        font-size: $l-size;
+        margin: 0;
+    }
+
+    &-subtitle {
+        font-size: $m-size;
+        color: $header-subtitle-color;
+        font-weight: $normal-weight;
+    }
+}

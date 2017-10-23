@@ -1,0 +1,56 @@
+.Button {
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: darken($primary, 10%);
+
+    padding: $s-size $m-size;
+    font-size: $m-size;
+    border-width: .3rem;
+    
+   
+
+    &:disabled {
+        opacity: .5;
+        cursor: default;
+    }
+
+    &-primary {
+        background-color: $primary;
+        color: $white;
+        font-weight: $bold-weight;
+    }
+
+    &-secondary {
+        color: $white;
+        background-color: $primary;
+    }
+
+    &-danger {
+        color: $white;
+        background-color: $danger;
+        border-color: darken($danger, 10%);
+    }
+
+    &-link {
+        background: none;
+        border: none;
+        color: $off-gray;
+        padding: 0;
+    }
+
+    &--small {
+        padding: $s-size $m-size;
+        font-size: $m-size;
+        border-width: .3rem;
+    }
+
+    &--xlarge {
+        padding: $m-size $l-size;
+        font-size: $l-size;
+        border-width: .6rem;
+    }   
+
+    &:hover {
+        cursor: pointer;
+    }
+}
