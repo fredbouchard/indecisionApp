@@ -1,4 +1,6 @@
 html {
+    width: 100vw;
+    height: 100vw;
     font-size: 62.5%;
 }
 
@@ -9,3 +11,10 @@ body {
     font-size: $m-size;
     font-weight: $normal-weight;
 }
+
+
+// @media (min-width: 45rem) {
+//     * {
+//         color: red;
+//     }
+// }

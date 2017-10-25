@@ -4,10 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .container {
    width: 100%;
    max-width: 60rem;
-   margin: 0 $l-size;
+   padding: 0 $l-size;
+   box-sizing: border-box;
 }
